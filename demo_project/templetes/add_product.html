@@ -1,0 +1,14 @@
+{% extends 'temp.html' %}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <br>
+    <input type="text" name="name" placeholder="Product Name"><br><br>
+    <input type="text" name="price" placeholder="Price"><br><br>
+    <input type="text" name="desc" placeholder="Description"><br><br>
+    <input type="file" name="img" placeholder="Image"><br><br>
+    <input type="submit" value="ADD">
+</form>
+
+{% endblock %}

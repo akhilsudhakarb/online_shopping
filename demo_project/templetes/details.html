@@ -1,0 +1,24 @@
+{% extends 'temp.html' %}
+
+{% block content %}
+
+<div class="container" style="margin-left: auto;margin-right: auto;">
+    <div class="row">
+
+        <div class="col-md-4">
+<div class="card" style="width: 310px;">
+  <img class="card-img-top" src="{{product1.img.url}}" alt="Card image cap" style="width:305px;height:250px">
+  <div class="card-body">
+    <h5 class="card-title">{{product1.name}}</h5>
+      <p class="card-text">Price: {{product1.price}}</p>
+    <p class="card-text">{{product1.desc}}</p>
+    <a class="btn btn-warning" href="{% url 'update' product1.id %}">Edit</a>
+    <a class="btn btn-danger" href="{% url 'delete' product1.id %}">Delete</a>
+  </div>
+</div>
+        </div>
+
+</div>
+</div>
+
+{% endblock %}
